@@ -16,7 +16,7 @@ pipeline{
                          //echo "Image name: ${image_full_name}"
                         //Build Image
                       //  def currentBuild = bat "docker build -t ${image_full_name} ."
-                         bat "docker build -t image_CI ."
+                         bat "docker build -t image_ci ."
                     }
                     //notifySuccessful()
                 // } catch (e) {

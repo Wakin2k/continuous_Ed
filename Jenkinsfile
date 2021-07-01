@@ -9,7 +9,7 @@ pipeline{
         }
         stage("Build Image"){
             steps{
-                try{
+              //  try{
                     script{
                         //Assemble Image Name
                         image_full_name = "image_CI"
@@ -18,12 +18,12 @@ pipeline{
                         def currentBuild = bat "docker build -t ${image_full_name} ."
                       //  def currentBuild = bat "docker build -t image_CI ."
                     }
-                    notifySuccessful()
-                } catch (e) {
-                    currentBuild.result="FAILED"
-                    notifyFailed()
-                    throw e
-                }
+                    //notifySuccessful()
+                // } catch (e) {
+                //     currentBuild.result="FAILED"
+                //     notifyFailed()
+                //     throw e
+                //}
                 echo "PAssei no build"
             }
         }

@@ -32,7 +32,7 @@ pipeline{
                 script{
                     def scannerHome = tool 'new-sonar';
                     withSonarQubeEnv('formacao-sq'){
-                        sh "%{scannerHome}/bin/sonar-scanner"
+                        bat "%{scannerHome}/bin/sonar-scanner"
                     }
                 }
                 echo "Passei no SQ Analysis"
